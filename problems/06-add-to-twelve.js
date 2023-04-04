@@ -14,8 +14,28 @@ addToTwelve([1]); // false
 
 
 function addToTwelve(arr) {
-  // Your code here
+  if (!arr.length) return false;
+  let firstNum = arr[0];
+  let secondNum = arr[1];
+  if (firstNum + secondNum === 12) return true;
+  else {
+    (arr.shift())
+    return addToTwelve(arr);
+  };
+
 }
+
+
+
+/*function addToTwelve(arr) {
+  // Your code here
+  if (arr.length < 2) return false;
+
+  if (arr[arr.length - 1] + arr[arr.length - 2] === 12) return true;
+
+  arr.pop();
+  return addToTwelve(arr);
+}/*
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

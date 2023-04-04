@@ -14,10 +14,19 @@ reverse(""); // ""
 
 
 function reverse(str) {
-  // Your code here
+  if (!str.length) return '';
+  let firstLetter = str[0];
+  return reverse(str.slice(1)) + firstLetter;
 }
 
+Examples:
 
+console.log(reverse("house")); // "esuoh"
+reverse("dog"); // "god"
+reverse("atom"); // "mota"
+reverse("q"); // "q"
+reverse("id"); // "di"
+reverse(""); // ""
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;
